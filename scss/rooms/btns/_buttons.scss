@@ -1,0 +1,112 @@
+@use '../../util' as *;
+
+#btns {
+  @include grido(
+    1fr,
+    auto,
+  );
+}
+
+@include mq('sm') {
+  #btns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include mq('med') {
+  #btns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include mq('lg') {
+  #btns {
+    grid-template-columns: minmax(300px, 400px);
+  }
+}
+
+//////////////////// ROOM 1 ////////////////////
+
+.btns__r01 {
+  padding: 1.5rem 1rem;
+  @include flexo(
+    center,
+    center
+  );
+  background-image: linear-gradient(to bottom right, #000, rgb(54, 54, 54));
+}
+
+.btns__r01_content {
+  padding: .5rem 1rem;
+}
+
+.btns__r01_content-btn {
+  font-family: 'okine-bold';
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  letter-spacing: .25rem;
+
+  -webkit-text-stroke: 3px white;
+  
+  background-image: linear-gradient(to right,rgb(50, 146, 255) 50%,rgb(0, 42, 182) 50%, rgb(0, 42, 182) 100%);
+  background-size: 200% 100%;
+  background-position: 200% 50%;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position .5s ease-out;
+
+  &:hover {
+    background-position: 100% 50%;
+  }
+  
+  &:active {
+    background-position: 0% 50%;
+  }
+
+}
+
+
+//////////////////// ROOM 2 ////////////////////
+
+.btns__r02 {
+  padding: 1.5rem 1rem;
+  @include flexo(
+    center,
+    center
+  );
+  background-image: linear-gradient(to bottom right, #FFF, rgb(231, 231, 231));
+}
+
+.btns__r02_content {
+  padding: .5rem 1rem;
+}
+
+.btns__r02_content-btn {
+  font-family: 'okine-bold';
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  letter-spacing: .25rem;
+
+  -webkit-text-stroke: 3px #000;
+  
+  background-image: linear-gradient(to right,rgb(255, 196, 225) 50%,rgb(255, 76, 165) 50%, rgb(255, 76, 165) 100%);
+  background-size: 200% 100%;
+  background-position: 200% 50%;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position .5s ease-out;
+
+  &:hover {
+    background-position: 100% 50%;
+  }
+  
+  &:active {
+    background-position: 0% 50%;
+  }
+}

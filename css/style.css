@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "okine-boldoutline";
+  src: url("../../assets/fonts/okine/OkineSansPERSONALUSE-BoldOutline.woff");
+}
+@font-face {
+  font-family: "okine-bold";
+  src: url("../../assets/fonts/okine/OkineSansPERSONALUSE-Bold.woff");
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -59,7 +67,9 @@ pre {
    ========================================================================== */
 /* Remove the gray background on active links in IE 10. */
 a {
+  display: block;
   background-color: transparent;
+  text-decoration: none;
 }
 
 /* 1. Remove the bottom border in Chrome 57-
@@ -275,6 +285,93 @@ template {
 /* Add the correct display in IE 10. */
 [hidden] {
   display: none;
+}
+
+#btns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+@media (min-width: 425px) {
+  #btns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  #btns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  #btns {
+    grid-template-columns: minmax(300px, 400px);
+  }
+}
+.btns__r01 {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #000, #363636);
+}
+
+.btns__r01_content {
+  padding: 0.5rem 1rem;
+}
+
+.btns__r01_content-btn {
+  font-family: "okine-bold";
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 3px white;
+  background-image: linear-gradient(to right, #3292ff 50%, #002ab6 50%, #002ab6 100%);
+  background-size: 200% 100%;
+  background-position: 200% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease-out;
+}
+.btns__r01_content-btn:hover {
+  background-position: 100% 50%;
+}
+.btns__r01_content-btn:active {
+  background-position: 0% 50%;
+}
+
+.btns__r02 {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #FFF, #e7e7e7);
+}
+
+.btns__r02_content {
+  padding: 0.5rem 1rem;
+}
+
+.btns__r02_content-btn {
+  font-family: "okine-bold";
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 3px #000;
+  background-image: linear-gradient(to right, #ffc4e1 50%, #ff4ca5 50%, #ff4ca5 100%);
+  background-size: 200% 100%;
+  background-position: 200% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease-out;
+}
+.btns__r02_content-btn:hover {
+  background-position: 100% 50%;
+}
+.btns__r02_content-btn:active {
+  background-position: 0% 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
