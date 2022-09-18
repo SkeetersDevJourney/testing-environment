@@ -418,7 +418,7 @@ template {
 }
 
 .btns__r04 {
-  height: max-content;
+  height: 100%;
   background-color: #DBDFAC;
 }
 
