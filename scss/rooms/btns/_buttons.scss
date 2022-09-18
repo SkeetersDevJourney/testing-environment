@@ -198,19 +198,17 @@
 // #3B1F2B #DB162F
 
 .btns__r04 {
-  width: 100%;
+  height: max-content;
   background-color: #DBDFAC;
 }
 
 .btns__r04-content {
   width: inherit;
-  height: 3rem;
 }
 
 .btns__r04-content_btn {
   overflow: hidden;
 
-  width: 100%;
   height: 4rem;
   padding: 0 .5rem;
 
@@ -225,7 +223,7 @@
   font-family: 'Passion One', cursive;
   font-size: 3rem;
 
-  transition: border-color .8s;
+  transition: border-color .5s;
 
   &:hover {
     border-color: #DB162F;

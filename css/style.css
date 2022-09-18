@@ -418,18 +418,16 @@ template {
 }
 
 .btns__r04 {
-  width: 100%;
+  height: max-content;
   background-color: #DBDFAC;
 }
 
 .btns__r04-content {
   width: inherit;
-  height: 3rem;
 }
 
 .btns__r04-content_btn {
   overflow: hidden;
-  width: 100%;
   height: 4rem;
   padding: 0 0.5rem;
   display: flex;
@@ -439,7 +437,7 @@ template {
   border-radius: 20px;
   font-family: "Passion One", cursive;
   font-size: 3rem;
-  transition: border-color 0.8s;
+  transition: border-color 0.5s;
 }
 .btns__r04-content_btn:hover {
   border-color: #DB162F;
