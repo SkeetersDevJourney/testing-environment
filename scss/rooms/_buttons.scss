@@ -1,4 +1,4 @@
-@use '../../util' as *;
+@use '../util' as *;
 
 ////////////////////////////////////////////////
 /////////////////// DEFAULTS ///////////////////
@@ -128,8 +128,10 @@
   color: #fff;
 
   &:hover {
+    padding: .5rem;
     font-size: 1.7rem;
-    transition: font-size .75s;
+    outline: 3px solid rgba(255,255,255,.8);
+    transition: font-size .75s, outline .2s .95s;
 
     & ~ .btns__r03-content_bar {
       opacity: 1;

@@ -1,0 +1,65 @@
+@use '../util' as *;
+
+////////////////////////////////////////////////
+/////////////////// DEFAULTS ///////////////////
+////////////////////////////////////////////////
+
+#menu-icon {
+  width: 100%;
+  @include grido(
+    repeat(auto-fit, minmax(75px, 1fr)),
+    auto,
+  );
+
+  & > * {
+    padding: 1rem;
+    @include flexo(
+      center,
+      center
+    );
+  }
+}
+
+
+////////////////////////////////////////////////
+//////////////////// ROOM 1 ////////////////////
+////////////////////////////////////////////////
+
+// #1F2041 #EBD4CB #DA9F93
+
+.menu-icon__r01 {
+  background-color: #1F2041;
+}
+
+.menu-icon__r01-svg {
+  cursor: pointer;
+  fill: #EBD4CB;
+
+  &:hover {
+    fill: #DA9F93;
+
+    path:nth-child(2) {
+      transform: scaleX(50%);
+    }
+  }
+
+  path {
+    transform-origin: center;
+    pointer-events: none;
+    transition: all .15s ease-out;
+  }
+}
+
+.icon01-change {
+  path:first-child {
+    transform: rotate(-45deg) translateY(-28%);
+  }
+
+  path:nth-child(2) {
+    opacity: 0;
+  }
+
+  path:last-child {
+    transform: rotate(45deg) translateY(28%);
+  }
+}
