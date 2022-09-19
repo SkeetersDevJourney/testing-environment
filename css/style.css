@@ -484,7 +484,7 @@ template {
 #menu-icon {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   grid-template-rows: auto;
 }
 #menu-icon > * {
@@ -515,13 +515,65 @@ template {
 }
 
 .icon01-change path:first-child {
-  transform: rotate(-45deg) translateY(-28%);
+  transform: rotate(-45deg) translateY(-27%);
 }
 .icon01-change path:nth-child(2) {
   opacity: 0;
 }
 .icon01-change path:last-child {
-  transform: rotate(45deg) translateY(28%);
+  transform: rotate(45deg) translateY(27%);
+}
+
+.menu-icon__r02 {
+  background-color: #F4EAE6;
+}
+
+.menu-icon__r02-svg {
+  cursor: pointer;
+}
+.menu-icon__r02-svg rect,
+.menu-icon__r02-svg polygon {
+  pointer-events: none;
+  fill: #2F5061;
+}
+.menu-icon__r02-svg rect {
+  transform-origin: left;
+  transition: all 0.2s ease-out;
+}
+.menu-icon__r02-svg polygon {
+  transition: all 0.2s ease-out;
+  transform: translateX(40%);
+}
+.menu-icon__r02-svg:hover rect,
+.menu-icon__r02-svg:hover polygon {
+  fill: #4297A0;
+}
+.menu-icon__r02-svg:hover rect:nth-of-type(2) {
+  width: 60%;
+  transition: all 0.2s ease-out;
+}
+.menu-icon__r02-svg:hover polygon {
+  transform: translateX(0);
+  transition: all 0.2s ease-out;
+}
+
+.icon02-change rect:first-of-type {
+  width: 50%;
+  transform: translate(50%, -15%) rotate(45deg);
+}
+.icon02-change rect:last-of-type {
+  width: 50%;
+  transform: translate(50%, 15%) rotate(-45deg);
+}
+.icon02-change:hover rect,
+.icon02-change:hover polygon {
+  fill: #E57F84;
+}
+.icon02-change:hover rect:nth-of-type(2) {
+  width: 100%;
+}
+.icon02-change:hover polygon {
+  transform: translateX(40%);
 }
 
 /*# sourceMappingURL=style.css.map */

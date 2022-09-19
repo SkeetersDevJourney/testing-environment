@@ -7,7 +7,7 @@
 #menu-icon {
   width: 100%;
   @include grido(
-    repeat(auto-fit, minmax(75px, 1fr)),
+    repeat(auto-fit, minmax(60px, 1fr)),
     auto,
   );
 
@@ -52,7 +52,7 @@
 
 .icon01-change {
   path:first-child {
-    transform: rotate(-45deg) translateY(-28%);
+    transform: rotate(-45deg) translateY(-27%);
   }
 
   path:nth-child(2) {
@@ -60,6 +60,85 @@
   }
 
   path:last-child {
-    transform: rotate(45deg) translateY(28%);
+    transform: rotate(45deg) translateY(27%);
   }
 }
+
+////////////////////////////////////////////////
+//////////////////// ROOM 2 ////////////////////
+////////////////////////////////////////////////
+
+// #F4EAE6 #4297A0 #E57F84 #2F5061
+
+.menu-icon__r02 {
+  background-color: #F4EAE6;
+}
+
+.menu-icon__r02-svg {
+  cursor: pointer;
+
+  rect, 
+  polygon {
+    pointer-events: none;
+    fill: #2F5061;
+  }
+
+  rect {
+    transform-origin: left;
+    transition: all .2s ease-out;
+  }
+
+  polygon {
+    transition: all .2s ease-out;
+    transform: translateX(40%);
+  }
+  
+
+  &:hover {
+
+    rect,
+    polygon {
+      fill: #4297A0;
+    }
+
+    rect:nth-of-type(2) {
+      width: 60%;
+      transition: all .2s ease-out;
+    }
+
+    polygon {
+      transform: translateX(0);
+      transition: all .2s ease-out;
+    }
+  }
+}
+
+.icon02-change {
+
+  rect:first-of-type {
+    width: 50%;
+    transform: translate(50%, -15%) rotate(45deg);
+  }
+
+  rect:last-of-type {
+    width: 50%;
+    transform: translate(50%, 15%) rotate(-45deg);
+  }
+
+  &:hover {
+    rect,
+    polygon {
+      fill: #E57F84;
+    }
+
+    rect:nth-of-type(2) {
+      width: 100%;
+    }
+
+    polygon {
+      transform: translateX(40%);
+    }
+  }
+}
+
+  

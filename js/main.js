@@ -5,4 +5,13 @@ icon01.addEventListener('click', () => {
   } else {
     icon01.classList.add('icon01-change');
   }
-})
+});
+
+const icon02 = document.querySelector('.menu-icon__r02-svg');
+icon02.addEventListener('click', () => {
+  if (icon02.classList.contains('icon02-change')) {
+    icon02.classList.remove('icon02-change');
+  } else {
+    icon02.classList.add('icon02-change');
+  }
+});
