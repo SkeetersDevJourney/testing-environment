@@ -270,3 +270,57 @@
 .btns__r04-content_btn-block:last-child {
   transition-delay: .5s;
 } 
+
+
+////////////////////////////////////////////////
+//////////////////// ROOM 5 ////////////////////
+////////////////////////////////////////////////
+
+// #D3F6DB #92D5E6 #772D8B #5A0B4D
+
+.btns__r05 {
+  background-color: #D3F6DB;
+  perspective: 200px;
+}
+
+.btns__r05-btn {
+
+  width: 150px;
+  height: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .4s cubic-bezier(.66,-0.5,.5,1.33);
+  
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+
+    font-family: 'Manrope';
+    font-size: 2rem;
+    border-radius: 15px;
+
+    backface-visibility: hidden;
+  }
+
+  span:first-child  {
+    transform: translateZ(25px);
+    outline: 3px solid #5A0B4D;
+    color: #5A0B4D;
+  }
+
+  span:last-child  {
+    transform: translateY(-25px) rotateX(90deg);
+    outline: 3px solid #a543c0;
+    color: #a543c0;
+  }
+
+  &:hover {
+    transform: rotateX(-90deg);
+    
+  }
+
+}

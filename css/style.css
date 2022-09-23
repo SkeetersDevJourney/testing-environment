@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -147,6 +148,10 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 /* Show the overflow in IE.
@@ -479,6 +484,44 @@ template {
 
 .btns__r04-content_btn-block:last-child {
   transition-delay: 0.5s;
+}
+
+.btns__r05 {
+  background-color: #D3F6DB;
+  perspective: 200px;
+}
+
+.btns__r05-btn {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.66, -0.5, 0.5, 1.33);
+}
+.btns__r05-btn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  font-family: "Manrope";
+  font-size: 2rem;
+  border-radius: 15px;
+  backface-visibility: hidden;
+}
+.btns__r05-btn span:first-child {
+  transform: translateZ(25px);
+  outline: 3px solid #5A0B4D;
+  color: #5A0B4D;
+}
+.btns__r05-btn span:last-child {
+  transform: translateY(-25px) rotateX(90deg);
+  outline: 3px solid #a543c0;
+  color: #a543c0;
+}
+.btns__r05-btn:hover {
+  transform: rotateX(-90deg);
 }
 
 #menu-icon {
